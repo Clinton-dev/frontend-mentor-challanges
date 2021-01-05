@@ -1,0 +1,26 @@
+$colors: (
+  darkGrayBlue: hsl(227, 10%, 46%),
+  desaturatedBlue: hsl(229, 23%, 23%),
+  darkCyan: hsl(185, 75%, 39%),
+  darkGray: hsl(0, 0%, 59%)
+);
+
+$font-size: 18px;
+
+$font-stack: 'Kumbh Sans', sans-serif;
+
+@function color($color-name) {
+  @return map-get($colors , $color-name)
+};
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  // position bg images at top left and bottom right
+  background-size: 30% auto, 30% auto;
+  background-position: 0 0 , 100% 0;
+}
+
