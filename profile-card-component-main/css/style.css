@@ -7,7 +7,7 @@ body {
   background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto;
-  background-position: left -20vw top -70vh, left 50vw top 50vh;
+  background-position: left -20vw top -90vh, left 50vw top 57vh;
   background-color: #19a2ae;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px; }
@@ -19,7 +19,9 @@ body {
 .container {
   background-color: #fff;
   color: #2d3248;
-  border-radius: 15px; }
+  border-radius: 15px;
+  width: 25%;
+  margin: 10em auto; }
   @media (max-width: 375px) {
     .container {
       width: 80%;
@@ -35,7 +37,8 @@ body {
     .container .content p {
       color: #969696; }
     .container .content .img-content {
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      margin-top: -60px; }
       @media (max-width: 375px) {
         .container .content .img-content {
           margin-top: -60px; } }
