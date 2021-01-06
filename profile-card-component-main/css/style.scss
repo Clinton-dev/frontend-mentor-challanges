@@ -1,26 +1,116 @@
-$colors: (
-  darkGrayBlue: hsl(227, 10%, 46%),
+$colors: (darkGrayBlue: hsl(227, 10%, 46%),
   desaturatedBlue: hsl(229, 23%, 23%),
   darkCyan: hsl(185, 75%, 39%),
-  darkGray: hsl(0, 0%, 59%)
-);
+  darkGray: hsl(0, 0%, 59%));
 
 $font-size: 18px;
+$font-stack: 'Kumbh Sans',
+sans-serif;
 
-$font-stack: 'Kumbh Sans', sans-serif;
+$mobile-width : 375px;
+$desktop-width: 1440px;
 
-@function color($color-name) {
-  @return map-get($colors , $color-name)
-};
-
-body {
-  margin: 0;
-  padding: 0;
-  
-  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
-  background-repeat: no-repeat, no-repeat;
-  // position bg images at top left and bottom right
-  background-size: 30% auto, 30% auto;
-  background-position: 0 0 , 100% 0;
+@mixin mobile {
+  @media(max-width: #{$mobile-width}) {
+    @content;
+  }
 }
 
+@mixin desktop {
+  @media(max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+;
+
+* {
+  box-sizing: border-box;
+  margin    : 0;
+  padding   : 0;
+}
+
+body {
+  background-image   : url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-repeat  : no-repeat, no-repeat;
+  background-size    : auto, auto;
+  background-position: left -20vw top -70vh, left 50vw top 50vh;
+  background-color   : color(darkCyan);
+  font-family        : $font-stack;
+  font-size          : $font-size;
+
+  @include mobile {
+    background-position: top -26vw left -26vh, top 55vh left 55vw;
+    background-size    : 90% auto, 90% auto;
+  }
+
+}
+
+
+.container {
+  background-color: #fff;
+  color: color(desaturatedBlue);
+  border-radius: 15px;
+  
+  @include mobile {
+    width           : 80%;
+    margin          : 8em auto;
+  }
+  
+  .header {
+    
+    img {
+      // border-radius: 15px 0;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      width: 100%;
+    }
+  }
+
+  .content {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid color(darkGray);
+    
+    p {
+      color: color(darkGray)
+    }
+    
+    .img-content {
+      margin-bottom: 15px;
+      
+      @include mobile{
+        margin-top: -60px;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+    }
+    
+    .info-content {
+      h2:after {
+        content: "26";
+        color: color(darkGray);
+        margin-left: 10px;
+        font-size: 0.8em;
+      }
+      
+    }
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-size: 0.75rem;
+    
+    p {
+      color: color(darkGray)
+    }
+  }
+}
