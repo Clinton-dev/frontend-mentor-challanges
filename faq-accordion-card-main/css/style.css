@@ -13,7 +13,8 @@ body {
 .container .faq-wrapper {
   background-color: #fff;
   text-align: center;
-  border-radius: 15px; }
+  border-radius: 15px;
+  box-shadow: 0 20px 30px #4a4b5e; }
   @media (max-width: 375px) {
     .container .faq-wrapper {
       width: 85%;
@@ -43,7 +44,8 @@ body {
       padding: 15px 5px; }
       .container .faq-wrapper .faq-content ul li p#header-info:after {
         content: url(../images/icon-arrow-down.svg);
-        float: right; }
+        float: right;
+        display: inline-block; }
       .container .faq-wrapper .faq-content ul li p#more-info {
         display: none; }
 

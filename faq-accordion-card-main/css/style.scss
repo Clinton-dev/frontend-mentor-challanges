@@ -46,6 +46,7 @@ body {
     background-color: #fff;
     text-align: center;
     border-radius: 15px;
+    box-shadow: 0 20px 30px color(veryDarkGreyBlue);
 
     @include mobile {
       width: 85%;
@@ -94,6 +95,7 @@ body {
           p#header-info:after {
             content: url(../images/icon-arrow-down.svg);
             float: right;
+            display: inline-block;
           }
 
           p#more-info {
