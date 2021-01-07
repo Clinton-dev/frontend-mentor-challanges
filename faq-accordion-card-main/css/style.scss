@@ -1,0 +1,110 @@
+$colors: (darkblue: hsl(238, 29%, 16%),
+  softred: hsl(14, 88%, 65%),
+  softviolet: hsl(273, 75%, 66%),
+  softblue: hsl(240, 73%, 65%),
+  veryDarkGreyBlue: hsl(237, 12%, 33%),
+  darkGreyBlue: hsl(240, 6%, 50%),
+  lightGreyBlue: hsl(240, 5%, 91%));
+
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+@mixin mobile {
+  @media(max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media(min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+* {
+  padding: 0;
+  margin : 0;
+}
+
+body {
+  color: color(veryDarkGreyBlue);
+  font-size  : 12px;
+  height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color : color(softviolet);
+  background-image : linear-gradient(color(softviolet), color(softblue));
+}
+
+.container {
+
+  .faq-wrapper {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 15px;
+
+    @include mobile {
+      width: 85%;
+      margin: 20vh auto;
+
+
+      .faq-image {
+        display: relative;
+  
+        img#bottom-layer {
+          z-index: 1;
+        }
+  
+        img#top-layer {
+          position: absolute;
+          top: 5%;
+          left: 10%;
+          z-index: 2;
+        }
+      }
+    }
+    
+
+    .faq-content {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+
+      h2 {
+        color: color(darkblue);
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.18rem;
+        color: color(darkGreyBlue);
+      }
+
+      ul {
+
+        li{
+          list-style-type: none;
+          border-bottom: 1px solid color(lightGreyBlue);
+          padding: 15px 5px;
+
+          p#header-info:after {
+            content: url(../images/icon-arrow-down.svg);
+            float: right;
+          }
+
+          p#more-info {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.attribution{
+  margin-top: 10px;
+}
