@@ -34,7 +34,7 @@ $desktop-width: 1440px;
 body {
   color: color(veryDarkGreyBlue);
   font-size  : 12px;
-  height: 100vh;
+  // height: 100vh;
   font-family: 'Kumbh Sans', sans-serif;
   background-color : color(softviolet);
   background-image : linear-gradient(color(softviolet), color(softblue));
@@ -65,6 +65,37 @@ body {
           top: 5%;
           left: 10%;
           z-index: 2;
+        }
+      }
+    }
+
+    @include desktop {
+      width: 70%;
+      margin: 10% auto;
+      display: flex;
+
+      .faq-image {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 90% auto;
+
+        .desktop {
+          position: relative;
+          
+          img#second-layer {
+            // overflow: hidden;
+            position: relative;
+            left: -5%;
+          }
+
+          img#third-layer {
+            position: absolute;
+            left: -19%;
+            bottom: 14%;
+            z-index: 2;
+          }
         }
       }
     }
