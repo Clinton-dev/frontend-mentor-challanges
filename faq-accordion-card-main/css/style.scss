@@ -16,7 +16,7 @@ $desktop-width: 1440px;
 }
 
 @mixin desktop {
-  @media(min-width: #{$desktop-width}) {
+  @media(max-width: #{$desktop-width}) {
     @content;
   }
 }
@@ -68,7 +68,6 @@ body {
         }
       }
     }
-    
 
     .faq-content {
       margin-top: 20px;
