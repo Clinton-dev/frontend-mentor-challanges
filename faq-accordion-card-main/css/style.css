@@ -5,6 +5,7 @@
 body {
   color: #4a4b5e;
   font-size: 12px;
+  min-height: 100vh;
   font-family: 'Kumbh Sans', sans-serif;
   background-color: #af67e9;
   background-image: linear-gradient(#af67e9, #6565e7); }
@@ -17,7 +18,8 @@ body {
   @media (max-width: 375px) {
     .container .faq-wrapper {
       width: 85%;
-      margin: 20vh auto; }
+      margin: 20vh auto;
+      display: block; }
       .container .faq-wrapper .faq-image {
         display: relative; }
         .container .faq-wrapper .faq-image img#bottom-layer {
@@ -26,7 +28,9 @@ body {
           position: absolute;
           top: 5%;
           left: 10%;
-          z-index: 2; } }
+          z-index: 2; }
+        .container .faq-wrapper .faq-image .desktop {
+          display: none; } }
   @media (max-width: 1440px) {
     .container .faq-wrapper {
       width: 70%;
@@ -38,6 +42,8 @@ body {
         background-image: url(../images/bg-pattern-desktop.svg);
         background-repeat: no-repeat;
         background-size: 90% auto; }
+        .container .faq-wrapper .faq-image .mobile {
+          display: none; }
         .container .faq-wrapper .faq-image .desktop {
           position: relative; }
           .container .faq-wrapper .faq-image .desktop img#second-layer {
@@ -62,11 +68,15 @@ body {
       list-style-type: none;
       border-bottom: 1px solid #e7e7e9;
       padding: 15px 5px; }
-      .container .faq-wrapper .faq-content ul li p#header-info:after {
+      .container .faq-wrapper .faq-content ul li p.header-info a {
+        text-decoration: none;
+        color: #787887; }
+      .container .faq-wrapper .faq-content ul li p.header-info a:hover {
+        color: #4a4b5e; }
+      .container .faq-wrapper .faq-content ul li p.header-info:after {
         content: url(../images/icon-arrow-down.svg);
-        float: right;
-        display: inline-block; }
-      .container .faq-wrapper .faq-content ul li p#more-info {
+        float: right; }
+      .container .faq-wrapper .faq-content ul li p.more-info {
         display: none; }
 
 .attribution {

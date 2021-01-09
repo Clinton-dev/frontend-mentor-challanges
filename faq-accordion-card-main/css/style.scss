@@ -34,7 +34,7 @@ $desktop-width: 1440px;
 body {
   color: color(veryDarkGreyBlue);
   font-size  : 12px;
-  // height: 100vh;
+  min-height: 100vh;
   font-family: 'Kumbh Sans', sans-serif;
   background-color : color(softviolet);
   background-image : linear-gradient(color(softviolet), color(softblue));
@@ -48,23 +48,28 @@ body {
     border-radius: 15px;
     box-shadow: 0 20px 30px color(veryDarkGreyBlue);
 
+    // mobile layout 
     @include mobile {
       width: 85%;
       margin: 20vh auto;
-
+      display: block;
 
       .faq-image {
         display: relative;
-  
-        img#bottom-layer {
-          z-index: 1;
-        }
-  
-        img#top-layer {
-          position: absolute;
-          top: 5%;
-          left: 10%;
-          z-index: 2;
+        
+          img#bottom-layer {
+            z-index: 1;
+          }
+    
+          img#top-layer {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            z-index: 2;
+          }
+
+        .desktop {
+          display: none;
         }
       }
     }
@@ -80,6 +85,10 @@ body {
         background-image: url(../images/bg-pattern-desktop.svg);
         background-repeat: no-repeat;
         background-size: 90% auto;
+
+        .mobile {
+          display: none;
+        }
 
         .desktop {
           position: relative;
@@ -121,14 +130,25 @@ body {
           list-style-type: none;
           border-bottom: 1px solid color(lightGreyBlue);
           padding: 15px 5px;
-
-          p#header-info:after {
+          
+          p.header-info {
+            
+            a {
+              text-decoration: none;
+              color: color(darkGreyBlue);
+            }
+            
+            a:hover {
+              color: color(veryDarkGreyBlue);
+            }
+          }
+          
+          p.header-info:after {
             content: url(../images/icon-arrow-down.svg);
             float: right;
-            display: inline-block;
           }
-
-          p#more-info {
+          
+          p.more-info {
             display: none;
           }
         }

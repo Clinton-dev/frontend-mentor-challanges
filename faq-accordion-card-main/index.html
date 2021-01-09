@@ -31,9 +31,11 @@
   <div class="container">
     <div class="faq-wrapper">
       <div class="faq-image">
-        <!-- mobile -->
-        <!-- <img src="images/bg-pattern-mobile.svg" alt="background pattern" id="bottom-layer">
-        <img src="images/illustration-woman-online-mobile.svg" alt="illustration of woman working online" id="top-layer"> -->
+        <div class="mobile">
+          <img src="images/bg-pattern-mobile.svg" alt="background pattern" id="bottom-layer">
+          <img src="images/illustration-woman-online-mobile.svg" alt="illustration of woman working online" id="top-layer">
+        </div>
+
         <div class="desktop">
           <img src="images/illustration-woman-online-desktop.svg" alt="illustration of woman working online" id="second-layer">
           <img src="images/illustration-box-desktop.svg" alt="@ icon" id="third-layer">
@@ -44,26 +46,26 @@
 
         <ul>
           <li>
-            <p id="header-info">How many team members can I invite?</p>
-            <p id="more-info">You can invite up to 2 additional users on the Free plan. There is no limit on 
+            <p class="header-info"><a href="#">How many team members can I invite?</a></p>
+            <p class="more-info">You can invite up to 2 additional users on the Free plan. There is no limit on 
               team members for the Premium plan.</p>
           </li>
           <li>
-            <p id="header-info">What is the maximum file upload size?</p>
-            <p id="more-info">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            <p class="header-info"><a href="#">What is the maximum file upload size?</a></p>
+            <p class="more-info">No more than 2GB. All files in your account must fit your allotted storage space.</p>
           </li>
           <li>
-            <p id="header-info">How do I reset my password?</p>
-            <p id="more-info">Click “Forgot password” from the login page or “Change password” from your profile page.
+            <p class="header-info"><a href="#">How do I reset my password?</a></p>
+            <p class="more-info">Click “Forgot password” from the login page or “Change password” from your profile page.
               A reset link will be emailed to you.</p>
           </li>
           <li>
-            <p id="header-info">Can I cancel my subscription?</p>
-            <p id="more-info">  Yes! Send us a message and we’ll process your request no questions asked.</p>
+            <p class="header-info"><a href="#">Can I cancel my subscription?</a></p>
+            <p class="more-info">Yes! Send us a message and we’ll process your request no questions asked.</p>
           </li>
           <li>
-            <p id="header-info">Do you provide additional support?</p>
-            <p id="more-info">  Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            <p class="header-info"><a href="#">Do you provide additional support?</a></p>
+            <p class="more-info">  Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
           </li>
         </ul>
       </div>
@@ -74,6 +76,24 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/Clinton-dev">clinton wambugu</a>.
   </div>
+
+  <script>
+    let headerinfor = document.getElementsByClassName("header-info");
+
+    let i;
+
+    for(i=0; i < headerinfor.length; i++) {
+      headerinfor[i].addEventListener("click", function () {
+        let moreinfo = this.nextElementSibling;
+
+        if(moreinfo.style.display != "block") {
+          moreinfo.style.display = "block"
+        }else {
+          moreinfo.style.display = "none"
+        }
+      })
+    };
+  </script>
 </body>
 
 </html>
