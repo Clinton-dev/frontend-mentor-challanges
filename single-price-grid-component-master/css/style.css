@@ -1,0 +1,63 @@
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  background-color: #e5eff5; }
+
+@media (max-width: 375px) {
+  main .price-grid-wrapper {
+    width: 90%;
+    margin: 4em auto; } }
+main .price-grid-wrapper .join-community {
+  background-color: #fff;
+  padding: 1em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #98a6bd; }
+  main .price-grid-wrapper .join-community h2 {
+    color: #2ab2af; }
+  main .price-grid-wrapper .join-community h3 {
+    color: #c0df34; }
+main .price-grid-wrapper .monthly-sub {
+  padding: 1em;
+  background-color: #28a9a7;
+  color: #fff; }
+  main .price-grid-wrapper .monthly-sub p#price {
+    color: #e5eff5; }
+  main .price-grid-wrapper .monthly-sub p {
+    font-size: 1.2rem;
+    font-weight: 400; }
+    main .price-grid-wrapper .monthly-sub p span#signup-amount {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-right: 5px;
+      color: #fff; }
+  main .price-grid-wrapper .monthly-sub button {
+    display: block;
+    width: 100%;
+    background-color: #c0df34;
+    border: none;
+    padding: 1em;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 5px; }
+main .price-grid-wrapper .why-us {
+  padding: 1em;
+  background-color: #3dd1cf;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+  main .price-grid-wrapper .why-us h2 {
+    color: #fff; }
+  @media (max-width: 375px) {
+    main .price-grid-wrapper .why-us p {
+      color: #e5eff5;
+      font-size: 1.2rem;
+      line-height: 7px; } }
+
+/*# sourceMappingURL=style.css.map */
