@@ -47,6 +47,11 @@ main {
       margin: 4em auto;
     }
 
+    @include desktop {
+      display: grid;
+      width: 70%;
+    }
+
     .join-community {
       background-color: #fff;
       padding: 1em;
