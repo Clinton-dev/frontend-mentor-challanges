@@ -13,9 +13,10 @@ $colors:(
 
 $mobile-width: 375px;
 $desktop-width: 1440px;
+$desktop-width1: 2000px;
 
 @mixin  desktop {
-  @media (max-width: #{ $desktop-width }) {
+  @media (max-width: #{ $desktop-width1 }) {
     @content;
   }
 }
@@ -41,6 +42,8 @@ body {
 
 main {
   .price-grid-wrapper {
+    box-shadow: 10px 10px 30px color(bg-grad-top);
+    border-radius: 5px;
 
     @include mobile {
       width: 90%;
