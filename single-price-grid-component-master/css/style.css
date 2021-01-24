@@ -16,7 +16,7 @@ main .price-grid-wrapper {
     main .price-grid-wrapper {
       width: 90%;
       margin: 4em auto; } }
-  @media (max-width: 2000px) {
+  @media (min-width: 400px) {
     main .price-grid-wrapper {
       width: 50%;
       margin: 4em auto;

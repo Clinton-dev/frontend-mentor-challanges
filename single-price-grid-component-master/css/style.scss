@@ -12,11 +12,13 @@ $colors:(
 }
 
 $mobile-width: 375px;
+$step2: 400px; 
 $desktop-width: 1440px;
 $desktop-width1: 2000px;
 
+
 @mixin  desktop {
-  @media (max-width: #{ $desktop-width1 }) {
+  @media (min-width: 400px) {
     @content;
   }
 }
