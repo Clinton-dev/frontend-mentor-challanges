@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+$colors: (
+  primary: hsl(223, 87%, 63%),
+  input-border-color: hsl(223, 100%, 88%),
+  err-msg: hsl(354, 100%, 66%),
+  neutral: hsl(0, 0%, 59%),
+  soon-msg: hsl(209, 33%, 12%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.comingSoonWrapper {
+  text-align: center;
+  width: 85%;
+  margin: 5em auto;
+
+  h2 {
+    text-align: left;
+    margin-top: 1.6em;
+    padding: 0 1em;
+    color: color(neutral);
+
+    span.important {
+      color: color(soon-msg);
+    }
+  }
+  
+  p {
+    color: color(soon-msg);
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 600;
+  }
+
+  form.get-notified {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3em;
+
+    input[type="text"], button {
+      width: 80%;
+      padding: .8em 0;
+      border-radius: 20px;
+    }
+
+    input[type="text"] {
+      // text-align: center;
+      border-radius: 20px;
+      border: 1px solid color(input-border-color);
+      padding-left: 1em;
+    }
+
+    button {
+      margin-top: .5em;
+      background-color: color(primary);
+      border: none;
+      color: white;
+    }
+  }
+}
+
+.illustration {
+  img {
+    width: 100%;
+  }
+}
+
+.footer-container {
+  text-align: center;
+  padding: 1em;
+
+  .social-icons {
+    li {
+      display: inline-block;
+      padding: .7em;
+      border: 1px solid color(neutral);
+      border-radius: 50%;
+      margin-left: .5em;
+    }
+
+    ion-icon {
+      color: color(primary);
+      font-size: 32px;
+    }
+  }
+
+  .copy-right {
+    margin-top: 1em;
+    color: color(neutral);
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  box-sizing: border-box; }
+
+.comingSoonWrapper {
+  text-align: center;
+  width: 85%;
+  margin: 5em auto; }
+  .comingSoonWrapper h2 {
+    text-align: left;
+    margin-top: 1.6em;
+    padding: 0 1em;
+    color: #969696; }
+    .comingSoonWrapper h2 span.important {
+      color: #151f29; }
+  .comingSoonWrapper p {
+    color: #151f29;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 600; }
+  .comingSoonWrapper form.get-notified {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3em; }
+    .comingSoonWrapper form.get-notified input[type="text"], .comingSoonWrapper form.get-notified button {
+      width: 80%;
+      padding: .8em 0;
+      border-radius: 20px; }
+    .comingSoonWrapper form.get-notified input[type="text"] {
+      border-radius: 20px;
+      border: 1px solid #c2d3ff;
+      padding-left: 1em; }
+    .comingSoonWrapper form.get-notified button {
+      margin-top: .5em;
+      background-color: #4f7df3;
+      border: none;
+      color: white; }
+
+.illustration img {
+  width: 100%; }
+
+.footer-container {
+  text-align: center;
+  padding: 1em; }
+  .footer-container .social-icons li {
+    display: inline-block;
+    padding: .7em;
+    border: 1px solid #969696;
+    border-radius: 50%;
+    margin-left: .5em; }
+  .footer-container .social-icons ion-icon {
+    color: #4f7df3;
+    font-size: 32px; }
+  .footer-container .copy-right {
+    margin-top: 1em;
+    color: #969696;
+    font-weight: 600; }
+
+/*# sourceMappingURL=main.css.map */
