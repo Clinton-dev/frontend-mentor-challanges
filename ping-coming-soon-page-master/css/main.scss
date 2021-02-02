@@ -29,13 +29,15 @@ body {
   margin: 5em auto;
 
   h2 {
-    text-align: left;
+    // text-align: left;
     margin-top: 1.6em;
     padding: 0 1em;
     color: color(neutral);
+    font-weight: 300;
 
     span.important {
       color: color(soon-msg);
+      font-weight: 700;
     }
   }
   
@@ -52,24 +54,34 @@ body {
     justify-content: center;
     margin-bottom: 3em;
 
-    input[type="text"], button {
-      width: 80%;
+    input[type="email"], button {
+      // width: 80%;
       padding: .8em 0;
       border-radius: 20px;
     }
 
-    input[type="text"] {
+    input[type="email"]:focus, button:focus {
+      outline: 0;
+    }
+
+    input[type="email"] {
       // text-align: center;
-      border-radius: 20px;
+      // border-radius: 20px;
       border: 1px solid color(input-border-color);
       padding-left: 1em;
     }
 
+    input[type="email"]:focus:invalid {
+      border: 1px solid color(err-msg);
+    }
+
     button {
-      margin-top: .5em;
+      // margin-top: .5em;
       background-color: color(primary);
       border: none;
       color: white;
+      font-weight: 600;
+      box-shadow: 0px 8px 17px color(input-border-color);
     }
   }
 }
@@ -103,5 +115,53 @@ body {
     margin-top: 1em;
     color: color(neutral);
     font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  input[type="email"] {
+    width: 90%;
+  }
+  
+  button {
+    margin-top: 1em;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  input[type="email"] {
+    width: 90%;
+  }
+  
+  button {
+    margin-top: 1em;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 500px) {
+
+    form.get-notified {
+      margin-top: 1.5em;
+
+      input[type="email"] {
+        width: 45%;
+      }
+  
+      button { 
+        margin-left: 1em;
+        width: 25%;
+        margin-top: 0;
+      }
+    }
+
+}
+
+@media only screen and (min-width: 960px) {
+  form.get-notified {
+
+    button {
+      margin-left: 2em;
+    }
   }
 }
