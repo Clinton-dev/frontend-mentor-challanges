@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #674baf;
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat; }
+  @media (max-width: 375px) {
+    body {
+      background-image: url(/images/bg-mobile.svg); } }
+
+nav {
+  padding: 1em; }
+  nav img.huddle-logo {
+    width: 41%; }
+
+.huddle-content-wrapper {
+  width: 85%;
+  margin: 4em auto 2.5em auto;
+  text-align: center; }
+  .huddle-content-wrapper .huddle-illustrator-img img {
+    width: 100%; }
+  @media (max-width: 375px) {
+    .huddle-content-wrapper .huddle-illustrator-img {
+      margin-bottom: 3em; } }
+  .huddle-content-wrapper .huddle-desc {
+    padding: 1em; }
+    .huddle-content-wrapper .huddle-desc h2 {
+      margin-bottom: 1em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600; }
+    .huddle-content-wrapper .huddle-desc p {
+      line-height: 1.5; }
+    .huddle-content-wrapper .huddle-desc button.register {
+      margin-top: 2em;
+      font-size: 1.3rem;
+      padding: .5em 3em;
+      border-radius: 70px;
+      border: none;
+      box-shadow: 0 4px 13px black;
+      color: #674baf; }
+    .huddle-content-wrapper .huddle-desc button.register:focus {
+      background-color: #e882e8;
+      color: white;
+      outline: none; }
+
+footer {
+  padding-bottom: 2em; }
+  footer .huddle-social-icons ul {
+    list-style-type: none; }
+    footer .huddle-social-icons ul li {
+      display: inline-block;
+      border: 1px solid white;
+      padding: .5em;
+      border-radius: 50%; }
+    footer .huddle-social-icons ul li:hover {
+      color: #e882e8;
+      border-color: #e882e8; }
+  @media (max-width: 375px) {
+    footer .huddle-social-icons {
+      text-align: center; } }
+
+li.two, li.three {
+  margin-left: .5em; }
+
+/*# sourceMappingURL=main.css.map */

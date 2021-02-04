@@ -8,6 +8,10 @@
   
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
 
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/529e1c0b24.js" crossorigin="anonymous"></script>
+
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,19 +19,34 @@
   </style>
 </head>
 <body>
+  <div class="wrapper">
 
-  Build The Community Your Fans Will Love
-
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
-
-  Register
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    <nav>
+        <img src="/images/logo.svg" alt="huddle logo" class="huddle-logo">
+    </nav>
+    <main>
+      <div class="huddle-content-wrapper">
+        <div class="huddle-illustrator-img">
+          <img src="/images/illustration-mockups.svg" alt="illustration mock up">
+        </div>
+        <div class="huddle-desc">
+          <h2>Build The Community Your Fans Will Love</h2>
+          <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+            Create connections with your users as you engage in genuine discussion.</p>
+          <button class="register">Register</button>
+        </div>
+      </div>
+    </main>
+  
+    <footer>
+      <div class="huddle-social-icons">
+        <ul>
+          <li><i class="fab fa-facebook-f "></i></li>
+          <li class="two"><i class="fab fa-twitter "></i></li>
+          <li class="three"><i class="fab fa-instagram "></i></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
